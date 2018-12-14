@@ -1,4 +1,4 @@
-#Starter plugin for WordPress and Gutenberg, the new editor!
+# Starter plugin for WordPress and Gutenberg, the new editor!
 
 **Todo: write the readme file ;-)**
 
