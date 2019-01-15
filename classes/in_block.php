@@ -30,6 +30,8 @@ class InBlock {
   private function __construct() {
     add_action('init', array( $this, 'registerBlock' ) );
     add_action('init', array( $this, 'registerScript' ) );
+    // add_action('enqueue_block_editor_assets', array( $this, 'registerStyle' ) );
+    add_action('enqueue_block_assets', array( $this, 'registerStyle' ) );
   }
 
   /**
@@ -43,6 +45,21 @@ class InBlock {
    		plugins_url( 'dist/main.js', plugin_dir_path( __FILE__ ) ),
    		array( 'wp-blocks', 'wp-element' ),
    		'1.0'
+   	);
+  }
+
+  /**
+   * Registers the style's script.
+   *
+   * @since 1.0.0
+   */
+  public function registerStyle() {
+    wp_enqueue_style(
+   		'in-block-style',
+   		plugins_url( 'style/main.css', plugin_dir_path( __FILE__ ) ),
+   		false,
+   		'1.0',
+      'all'
    	);
   }
 
