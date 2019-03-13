@@ -43,7 +43,7 @@ class InBlock {
     wp_register_script(
    		'in-block-script',
    		plugins_url( 'dist/main.js', plugin_dir_path( __FILE__ ) ),
-   		array( 'wp-blocks', 'wp-element' ),
+   		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-components', 'wp-edit-post' ),
    		'1.0'
    	);
   }
