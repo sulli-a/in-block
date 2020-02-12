@@ -8,7 +8,7 @@ import { PLUGIN_NAME } from '../constants'
 const BLOCK_NAME = `${PLUGIN_NAME}/text-image`
 
 registerBlockType(BLOCK_NAME, {
-  title: __('Texte and image'),
+  title: __('Text and image'),
   description: __('Another example with text and image'),
   icon: 'media-document',
   category: 'common',
