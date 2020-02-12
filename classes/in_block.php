@@ -43,11 +43,11 @@ class InBlock {
     wp_register_script(
    		'in-block-script',
    		plugins_url( 'dist/main.js', plugin_dir_path( __FILE__ ) ),
-   		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-components', 'wp-edit-post' ),
+   		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-components', 'wp-edit-post', 'wp-rich-text', 'lodash' ),
    		'1.0'
-   	);
+    );
   }
-
+ 
   /**
    * Registers the style's script.
    *

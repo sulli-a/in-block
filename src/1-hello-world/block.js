@@ -1,9 +1,12 @@
-const { createElement } = wp.element
 const { registerBlockType } = wp.blocks
+const { __ } = wp.i18n
+import { PLUGIN_NAME } from '../constants'
 
-registerBlockType('in-block/hello-world', {
-  title: 'Hello World',
-  description: 'Hello World example block!',
+const BLOCK_NAME = `${PLUGIN_NAME}/hello-world`
+
+registerBlockType(BLOCK_NAME, {
+  title: __('Hello World'),
+  description: __('Hello World example block!'),
   icon: 'admin-site',
   category: 'common',
 
