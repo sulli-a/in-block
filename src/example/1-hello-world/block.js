@@ -1,6 +1,8 @@
+import { PLUGIN_NAME } from '../../constants'
+
+const { wp } = window
 const { registerBlockType } = wp.blocks
 const { __ } = wp.i18n
-import { PLUGIN_NAME } from '../constants'
 
 const BLOCK_NAME = `${PLUGIN_NAME}/hello-world`
 
@@ -11,13 +13,13 @@ registerBlockType(BLOCK_NAME, {
   category: 'common',
 
   edit: () => {
-    return(
+    return (
       <p>Hello World from backend</p>
     )
   },
 
   save: () => {
-    return(
+    return (
       <p>Hello World from frontend</p>
     )
   }

@@ -1,7 +1,9 @@
+import { PLUGIN_NAME } from '../../constants'
+
+const { wp } = window
 const { registerBlockType } = wp.blocks
 const { __ } = wp.i18n
 const { PlainText, URLInputButton } = wp.blockEditor
-import { PLUGIN_NAME } from '../constants'
 
 const BLOCK_NAME = `${PLUGIN_NAME}/url-button`
 
@@ -16,24 +18,24 @@ registerBlockType(BLOCK_NAME, {
     },
     link: {
       type: 'string'
-    },
+    }
   },
 
   edit: props => {
     const { attributes: { link, text }, setAttributes, className } = props
-    return(
+    return (
       <>
-        <PlainText 
-          keepPlaceholderOnFocus="true"
-          placeholder={ __( 'Text') }
-          className={ className }
+        <PlainText
+          keepPlaceholderOnFocus='true'
+          placeholder={__('Text')}
+          className={className}
           value={text}
-          onChange={ text => setAttributes( { text } ) }
+          onChange={text => setAttributes({ text })}
         />
         <URLInputButton
-          className={ __('link') }
-          url={ link }
-          onChange={ link => setAttributes( { link } ) }
+          className={__('link')}
+          url={link}
+          onChange={link => setAttributes({ link })}
         />
       </>
     )

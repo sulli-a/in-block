@@ -7,7 +7,7 @@
  * Author URI:
  * Text Domain:     in-block
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.1.0
  *
  * @package         In_Block
  */

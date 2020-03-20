@@ -1,7 +1,9 @@
+import { PLUGIN_NAME } from '../../constants'
+
+const { wp } = window
 const { registerBlockType } = wp.blocks
 const { __ } = wp.i18n
 const { PlainText } = wp.blockEditor
-import { PLUGIN_NAME } from '../constants'
 
 const BLOCK_NAME = `${PLUGIN_NAME}/plain-text`
 
@@ -13,21 +15,21 @@ registerBlockType(BLOCK_NAME, {
   attributes: {
     text: {
       type: 'string'
-    },
+    }
   },
 
   edit: props => {
     const { attributes: { text }, setAttributes, className } = props
-    return(
+    return (
       <>
-        <PlainText 
-          keepPlaceholderOnFocus="true"
-          placeholder={ __( 'Texte') }
-          className={ className }
+        <PlainText
+          keepPlaceholderOnFocus='true'
+          placeholder={__('Texte')}
+          className={className}
           value={text}
-          onChange={ (text) => {
-          setAttributes( { text } )
-          } }
+          onChange={(text) => {
+            setAttributes({ text })
+          }}
         />
       </>
     )
