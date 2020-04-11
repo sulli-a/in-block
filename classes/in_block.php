@@ -13,7 +13,7 @@
  */
 namespace In_Block;
 
-require_once( plugin_dir_path( __FILE__ ) . '../src/6-ssr-block/render.php' );
+require_once( plugin_dir_path( __FILE__ ) . '../src/example/6-ssr-block/render.php' );
 
 class InBlock {
 

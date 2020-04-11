@@ -1,7 +1,9 @@
+import { PLUGIN_NAME } from '../../constants'
+
+const { wp } = window
 const { registerBlockType } = wp.blocks
 const { __ } = wp.i18n
 const { PlainText } = wp.blockEditor
-import { PLUGIN_NAME } from '../constants'
 
 const BLOCK_NAME = `${PLUGIN_NAME}/plain-text`
 
