@@ -13,6 +13,8 @@
  */
 namespace In_Block;
 
+require_once( plugin_dir_path( __FILE__ ) . '../src/6-ssr-block/render.php' );
+
 class InBlock {
 
   /**
@@ -72,8 +74,12 @@ class InBlock {
     if( ! function_exists( 'register_block_type' ) ) {
       return;
     }
-    register_block_type( 'in-block/hello-world', array(
-    	'editor_script' => 'in-block-script',
+    register_block_type( 'in-block/ssr-block', array( 
+      'render_callback' => 'ssr_block_render'
+    ));   
+
+    register_block_type( 'in-block/blocks', array(
+    	'editor_script' => 'in-block-script'
     ) );
   }
 

@@ -3,10 +3,10 @@ const { __ } = wp.i18n
 const { PlainText } = wp.blockEditor
 import { PLUGIN_NAME } from '../constants'
 
-const BLOCK_NAME = `${PLUGIN_NAME}/plain-text`
+const BLOCK_NAME = `${PLUGIN_NAME}/ssr-block`
 
 registerBlockType(BLOCK_NAME, {
-  title: __('Example'),
+  title: __('SSR block'),
   description: __('Example block!'),
   icon: 'nametag',
   category: 'common',
@@ -52,10 +52,5 @@ registerBlockType(BLOCK_NAME, {
     )
   },
 
-  save: ({ attributes: { title, subtitle } }) => (
-    <div className='block-title-subtitle'>
-      <h1 className='block-title-subtitle__title'>{title}</h1>
-      <p className='block-title-subtitle__subtitle'>{subtitle}</p>
-    </div>
-  )
+  save: () => null
 })

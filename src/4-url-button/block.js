@@ -24,7 +24,7 @@ registerBlockType(BLOCK_NAME, {
     return(
       <>
         <PlainText 
-          keepPlaceholderOnFocus="true"
+          keepplaceholderonfocus="true"
           placeholder={ __( 'Text') }
           className={ className }
           value={text}

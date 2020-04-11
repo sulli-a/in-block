@@ -7,7 +7,7 @@ const BLOCK_NAME = `${PLUGIN_NAME}/hello-world`
 registerBlockType(BLOCK_NAME, {
   title: __('Hello World'),
   description: __('Hello World example block!'),
-  icon: 'admin-site',
+  icon: 'visibility',
   category: 'common',
 
   edit: () => {
@@ -18,7 +18,9 @@ registerBlockType(BLOCK_NAME, {
 
   save: () => {
     return(
-      <p>Hello World from frontend</p>
+      <div className='hello-world-container'>
+        <p>Hello World from frontend</p>
+      </div>
     )
   }
 })

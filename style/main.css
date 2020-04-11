@@ -1,7 +1,3 @@
 .d-flex {
     display: flex;
 }
-
-.w-50 {
-    flex-basis: 50%;
-}
