@@ -8,8 +8,8 @@ const { PlainText } = wp.blockEditor
 const BLOCK_NAME = `${PLUGIN_NAME}/plain-text`
 
 registerBlockType(BLOCK_NAME, {
-  title: __('Example'),
-  description: __('Example block!'),
+  title: __('Plain text'),
+  description: __('Plain text block!'),
   icon: 'nametag',
   category: 'common',
   attributes: {
@@ -23,30 +23,30 @@ registerBlockType(BLOCK_NAME, {
 
   edit: props => {
     const { attributes: { title, subtitle }, setAttributes, className } = props
-    return(
+    return (
       <>
-        <div className="d-flex">
-          <div className="col-1">
-            <PlainText 
-              keepplaceholderonfocus="true"
-              placeholder={ __( 'Title') }
-              className={ className }
+        <div className='d-flex'>
+          <div className='col-1'>
+            <PlainText
+              keepplaceholderonfocus='true'
+              placeholder={__('Title')}
+              className={className}
               value={title}
-              onChange={ (title) => {
-                setAttributes( { title: title } )
-              } }
+              onChange={(newTitle) => {
+                setAttributes({ title: newTitle })
+              }}
             />
-            <PlainText 
-              keepplaceholderonfocus="true"
-              placeholder={ __( 'Subtitle') }
-              className={ className }
+            <PlainText
+              keepplaceholderonfocus='true'
+              placeholder={__('Subtitle')}
+              className={className}
               value={subtitle}
-              onChange={ (param1) => {
-                setAttributes( { subtitle: param1 } )
-              } }
+              onChange={(newSubtitle) => {
+                setAttributes({ subtitle: newSubtitle })
+              }}
             />
           </div>
-          <div className="col-2">
+          <div className='col-2'>
             <p>Mon image ici</p>
           </div>
         </div>

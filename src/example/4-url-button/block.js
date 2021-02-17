@@ -25,10 +25,10 @@ registerBlockType(BLOCK_NAME, {
     const { attributes: { link, text }, setAttributes, className } = props
     return (
       <>
-        <PlainText 
-          keepplaceholderonfocus="true"
-          placeholder={ __( 'Text') }
-          className={ className }
+        <PlainText
+          keepplaceholderonfocus='true'
+          placeholder={__('Text')}
+          className={className}
           value={text}
           onChange={text => setAttributes({ text })}
         />

@@ -42,10 +42,12 @@ class InBlock {
    * @since 1.0.0
    */
   public function registerScript() {
+    /*
+    array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-components', 'wp-edit-post', 'wp-rich-text', 'lodash' )*/
     wp_register_script(
    		'in-block-script',
    		plugins_url( 'dist/main.js', plugin_dir_path( __FILE__ ) ),
-   		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-components', 'wp-edit-post', 'wp-rich-text', 'lodash' ),
+   		array( 'wp-blocks',  'wp-element', 'wp-editor' ),
    		'1.0'
     );
   }
@@ -58,7 +60,7 @@ class InBlock {
   public function registerStyle() {
     wp_enqueue_style(
    		'in-block-style',
-   		plugins_url( 'style/main.css', plugin_dir_path( __FILE__ ) ),
+   		plugins_url( 'style/global.css', plugin_dir_path( __FILE__ ) ),
    		false,
    		'1.0',
       'all'

@@ -1,3 +1,4 @@
 {
-  "presets": ["@babel/preset-react"]
+  "plugins": ["lodash"],
+  "presets": ["@wordpress/default"]
 }

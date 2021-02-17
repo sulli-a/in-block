@@ -1,3 +1,4 @@
+import './styles.scss'
 import { PLUGIN_NAME } from '../../constants'
 
 const { wp } = window
@@ -14,13 +15,13 @@ registerBlockType(BLOCK_NAME, {
 
   edit: () => {
     return (
-      <p>Hello World from backend</p>
+      <p className='block__hello-world'>Hello World from backend</p>
     )
   },
 
   save: () => {
     return (
-      <p>Hello World from frontend</p>
+      <p className='block__hello-world'>Hello World from frontend</p>
     )
   }
 })
